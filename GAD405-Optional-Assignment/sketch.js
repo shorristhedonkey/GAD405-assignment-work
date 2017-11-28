@@ -60,6 +60,9 @@ function draw() {
 	text(round(mouseX) + " x", mouseX + 12, mouseY + 32);
 	text(round(mouseY) + " y", mouseX + 12, mouseY + 64);
 	pop();
+	//boxMouseX = map(mouseX, boxesX[00], boxesY[00], boxesX[99], boxesY[99]);
+	//boxMouseY = map(mouseY, boxesX[00], boxesY[00], boxesX[99], boxesY[99]);
+	//rect(boxMouseX, boxMouseY, boxWidth, boxWidth);
   }
   function keyPressed(){
 	  if (keyCode === LEFT_ARROW) {
@@ -87,7 +90,7 @@ function draw() {
 	  }else{
 		  x = x + 100;
 	  }
-	  if(y <= 99){
+	  if(y <= height){
 	  fill(255, 0, 0);
 	  rect(boxWidth*boxesX[x], boxWidth*boxesY[y], boxWidth, boxWidth);				
 	  //console.log("drawn3");
